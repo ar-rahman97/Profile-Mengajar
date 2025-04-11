@@ -1,0 +1,237 @@
+* {
+    margin: 0; 
+} /*set everything inti margin 0 */
+
+body {
+    background-color: black;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    filter: blur();
+}  /* set the body style */
+
+h1, h2 {
+    color: rgb(68, 14, 112);
+    margin: 10px 0px 10px 0px;
+    text-transform:uppercase;
+} /* set the text  */
+
+h2 {
+    font-size: 22px;
+}
+
+h5, h4 {
+    margin: 8px 0px 3px 0px;
+    font-size: 18px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.side-resume {
+    background-color: white
+}  /* background all resume */
+
+.block {
+    display: flex;
+}  /* nak memisahkan belah kanan dan belah kiri  */
+
+.column1{
+    width: 35%;
+    background-color:rgb(187, 187, 187);
+    box-shadow: 7px 0px 8px 0px rgb(122, 122, 122);
+}  /* kanan */
+
+.column2 {
+    width: 70%;
+} /* kiri */
+
+img {
+    border: 3px solid rgb(80, 80, 80);
+    /* border-image: url(rahman.jpg) 30% round; */
+    filter: blur(4px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 30%;
+    animation-name: gambar-profile;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    width: 53%;
+} /* gambar bagi cantik */
+
+@keyframes gambar-profile {
+    from {filter: blur(4px);}
+
+    to {filter: blur(0px);}
+}
+
+.title {
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}  /* untuk semua text yg terlibat  */
+
+.title:hover {
+    /* color: green; */
+    text-shadow: 0px 0px 1.5px rgb(122, 122, 122);
+}
+
+.skill span {
+    display: inline-flex;
+    width: 120px;
+}  /* skill part ada letak bintang */
+
+li {
+    font-size: 15px;
+}
+
+.fa-star {
+    font-size: 14px;
+}
+
+.fa-star:hover {
+    animation-name: star;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+@keyframes star {
+    from {
+        color: white;
+        transform:rotate(10deg);
+    }
+    to {
+        color: black;
+        transform: rotate(360deg);
+    }
+}
+
+.email-kakmai {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.email-kakmai:hover {
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.info-penting {
+    text-align: center;
+}
+
+#nama {
+    margin-top: 25px;
+    text-shadow: 0px 0px 2px rgb(121, 113, 71); /* 1-ketepi, 2-kebawah, 3-pecah2, last-color of shadow*/
+}
+
+#nama:hover {
+    text-shadow: none;
+}
+
+hr{
+    border-width: 0px;
+    box-shadow: 7px 0px 5px 2px rgb(121, 121, 121);
+    margin-bottom: 13px;
+}
+
+.box-media{
+    background-color: transparent;
+    width: 90%;
+    text-align: center;
+    height: auto;
+    padding: 1% 1.5%;
+    border-radius: 20%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.social {
+    position: relative;
+    background-color: rgb(187, 187, 187);
+    padding: 5px;
+    margin: 2px 0px;
+    border-radius: 40%;
+    border: 2px solid rgb(71, 67, 67);
+    flex-basis: 20%;
+    max-width: 25%;
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-media {
+    color: black;
+}
+
+.link-media:hover {
+    color: purple;
+}
+
+.edu, .activity, .experience {
+    padding-left: 40px;
+}
+
+.protege {
+    display: inline-block;
+}
+
+footer {
+    background-color: purple;
+    color: transparent;
+    text-align: center;
+}
+
+@media (max-width: 870px){
+    .skill span {
+        display:block;
+    }
+}
+
+@media (max-width: 600px){
+    #nama {
+        font-size: 13px;
+        margin-top: 15px;
+    }
+    p, li, .social {
+        font-size: 7px;
+    }
+    h2 {
+        font-size: 10px;
+    }
+    h5,h4{
+        font-size: 8px;
+        margin-bottom: 3px;
+    }
+    .fa-star {
+        font-size: 7px;
+    }
+    .skill span {
+        display:inline-flex;
+    }
+    ul {
+        padding-left: 20px;
+    }
+    .title {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .edu, .activity, .experience {
+        padding-left: 20px;
+    }
+    
+
+}
